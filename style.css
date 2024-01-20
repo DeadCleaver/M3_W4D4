@@ -1,0 +1,177 @@
+/* general reset */
+
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #141414 !important;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+/* carousel styling */
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item > div:first-child, .carousel-inner .carousel-item > div:nth-child(2) {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+/* personalizations */
+
+
+nav.netflix-nav {
+    background-color: #141414 !important;
+}
+
+#neflix-logo {
+    height: 50px;
+}
+
+img.netflix-user-avatar {
+    height: 40px !important;
+}
+
+a.netflix-user-avatar {
+    background-color: #141414 !important;
+    border-color:  #141414 !important;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* .caret {
+    color: white !important;
+} */
+
+section.netflix-gal-options {
+    padding-top: 100px;
+}
+
+.netflix-gal-options .btn {
+    background-color: #141414 !important;
+    border-color: white !important;
+    border-radius: 0;
+}
+
+.net-selectors button ion-icon {
+    font-size: 18pt;
+}
+
+a.carousel-control-prev {
+    left: -3%;
+}
+
+a.carousel-control-next {
+    right: -3%;
+}
+
+span.carousel-control-prev-icon, span.carousel-control-next-icon {
+    opacity: 0 !important;
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+a.carousel-control-prev:hover span.carousel-control-prev-icon {
+    opacity: 1 !important;
+}
+
+a.carousel-control-next:hover span.carousel-control-next-icon {
+    opacity: 1 !important;
+}
+
+.netflix-background {
+    background-color: #141414 !important;
+}
+
+div.card-img:hover {
+    transition: transform 0.8s ease-out 0.15s;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+div.carousel-inner {
+    overflow: visible  !important;
+}
+
+div.netflix-gal-shader {
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(20,20,20,1) 100%);
+}
+
+h5.netflix-titles {
+    color: #c8c8c8;
+}
+
+div.netflix-movie-card {
+    background-color: #141414 !important;
+}
+
+.netflix-footer-menu i {
+    color: #c8c8c8;
+}
+
+.netflix-footer-menu div ul li {
+    list-style: none;
+    color: #c8c8c8;
+}
+
+.netflix-footer-menu button {
+    border-color: #c8c8c8;
+    color: #c8c8c8;
+}
+
+.netflix-gallery {
+    opacity: 0;
+}
+
+.visible {
+    animation: reveal 1.2s ease-in-out 0.3s forwards;
+}
+
+@keyframes reveal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

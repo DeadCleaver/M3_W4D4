@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix clone Homework</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark netflix-nav fixed-top">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#"><img id="neflix-logo" src="./assets/Netflix_Logo_RGB.png"
+                        alt="Netflix logo"></a>
+                <button class="navbar-toggler ms-2 me-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tv Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My List</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex netlix-user-area align-items-center">
+                    <ion-icon class="fs-4" name="search-outline"></ion-icon>
+                    <span class="ms-3">KIDS</span>
+                    <ion-icon class="ms-3 fs-4" name="notifications-outline"></ion-icon>
+                    <div class="dropdown ms-3">
+                        <a class="btn btn-secondary dropdown-toggle netflix-user-avatar" href="#" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="netflix-user-avatar" src="./assets/Netflix-avatar.png" alt="user">
+                        </a>
+                        <ul class="btn dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#"><ion-icon class="me-3 my-auto" name="person-circle-outline"></ion-icon>Andrea Montefiori</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><ion-icon class="me-3 my-auto" name="settings-outline"></ion-icon>Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><ion-icon class="me-3 my-auto" name="power-outline"></ion-icon>Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- genre selector -->
+        <section class="container-fluid d-flex justify-content-between netflix-gal-options">
+            <div class="d-flex">
+                <h2 class="fw-bold mx-3">TV Shows</h2>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Genres
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item" href="#">Sci-fi and Fantasy</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Comedies</a></li>
+                        <li><a class="dropdown-item" href="#">Anime</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="me-3 net-selectors">
+                <button type="button" class="btn btn-secondary"><ion-icon 
+                        name="reorder-three-outline"></ion-icon></button>
+                <button type="button" class="btn btn-secondary"><ion-icon  name="apps-outline"></ion-icon></button>
+            </div>
+        </section>
+
+        <div class="netflix-gallery">
+            <!-- gallery 1 and title -->
+            <section class="container-fluid pt-5 pb-1">
+                <h5 class="fw-bold ms-3 netflix-titles">Trending Now</h5>
+            </section>
+
+            <div class="container-fluid text-center my-2 netflix-background">
+                <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel1" class="carousel slide netflix-background" data-bs-ride="carousel"
+                        data-bs-interval="false">
+                        <div class="carousel-inner" role="listbox">
+
+                            <div class="carousel-item active">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/1.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/2.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/3.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/4.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/5.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/6.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/7.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/8.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/9.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/10.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/11.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="px-1 netflix-movie-card">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/12.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a class="carousel-control-prev w-aut" href="#recipeCarousel1" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel1" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                        <div class="position-absolute top-50 start-100 translate-middle netflix-gal-shader"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="netflix-gallery">
+            <!-- gallery 2 and title -->
+            <section class="container-fluid pt-5 pb-1">
+                <h5 class="fw-bold ms-3 netflix-titles">Watch it again</h5>
+            </section>
+
+            <div class="container-fluid text-center my-2 netflix-background">
+                <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel2" class="carousel slide netflix-background" data-bs-ride="carousel"
+                        data-bs-interval="false">
+                        <div class="carousel-inner" role="listbox">
+
+                            <div class="carousel-item active">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/7.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/8.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/9.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/10.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/11.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/12.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/13.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/14.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/15.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/16.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/17.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/18.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a class="carousel-control-prev w-aut" href="#recipeCarousel2" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                        <div class="position-absolute top-50 start-100 translate-middle netflix-gal-shader"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="netflix-gallery">
+            <!-- gallery 3 and title -->
+            <section class="container-fluid pt-5 pb-1">
+                <h5 class="fw-bold ms-3 netflix-titles">New Releases</h5>
+            </section>
+
+            <div class="container-fluid text-center my-2 netflix-background">
+                <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel3" class="carousel slide netflix-background" data-bs-ride="carousel"
+                        data-bs-interval="false">
+                        <div class="carousel-inner" role="listbox">
+
+                            <div class="carousel-item active">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/2.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/4.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/6.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/8.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/10.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/12.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/14.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/16.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/18.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/1.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/3.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <div class="mx-1">
+                                        <div class="card-img">
+                                            <img src="./assets/movies/5.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a class="carousel-control-prev w-aut" href="#recipeCarousel3" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                        <div class="position-absolute top-50 start-100 translate-middle netflix-gal-shader"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- footer -->
+        <footer class="pt-5 pb-2">
+            <div class="container-sm w-75 netflix-footer-menu fs-3 py-1">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="container-sm w-75">
+                <div class="row netflix-footer-menu">
+                    <div class="col-3">
+                        <ul class="ps-0">
+                            <li>Audio & subtitles</li>
+                            <li>Media Center</li>
+                            <li>Privacy</li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul class="ps-0">
+                            <li>Audio Description</li>
+                            <li>Investor Relations</li>
+                            <li>Legal Notices</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul class="ps-0">
+                            <li>Help Center</li>
+                            <li>Jobs</li>
+                            <li>Cookie Preferences</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul class="ps-0">
+                            <li>Gift Cards</li>
+                            <li>Terms of Use</li>
+                            <li>Corporate informations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-sm w-75 netflix-footer-menu">
+                <button type="button" class="btn btn-outline-secondary btn-sm">Service Code</button>
+            </div>
+        </footer>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/90071272c0.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
