@@ -65,3 +65,19 @@ function spyScroll() {
 
 window.addEventListener("scroll", spyScroll);
 
+/* my extra */
+/* logo che compare a window onlad */
+window.onload = () => {
+    document.getElementById("neflix-logo").classList.add("netflix-display-logo");
+}
+
+/* input box di ricerca che compare su click della lente di ingrandimento */
+let searchIcon = document.querySelector("ion-icon.netflix-search");
+let searchBox = document.querySelector("input.form-control");
+console.log(searchIcon);
+console.log(searchBox);
+
+searchIcon.addEventListener("click", () => {
+    searchBox.classList.remove("hide-search");
+    searchBox.classList.add("show-search");
+});
